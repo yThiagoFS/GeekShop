@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeekShopping.ProductAPI.Migrations
 {
     [DbContext(typeof(SQLContext))]
-    [Migration("20230402171856_AddProductDataTableOnDB")]
-    partial class AddProductDataTableOnDB
+    [Migration("20230402190714_removingAutoIncrementProductId")]
+    partial class removingAutoIncrementProductId
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,11 +26,8 @@ namespace GeekShopping.ProductAPI.Migrations
             modelBuilder.Entity("GeekShopping.ProductAPI.Model.Product", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasColumnName("id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
                     b.Property<string>("CategoryName")
                         .IsRequired()

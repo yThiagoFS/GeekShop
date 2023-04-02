@@ -24,11 +24,8 @@ namespace GeekShopping.ProductAPI.Migrations
             modelBuilder.Entity("GeekShopping.ProductAPI.Model.Product", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasColumnName("id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
                     b.Property<string>("CategoryName")
                         .IsRequired()
