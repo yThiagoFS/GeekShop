@@ -1,9 +1,12 @@
+using GeekShoping.Web.Services;
+using GeekShoping.Web.Services.IServices;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddHttpClient();
+builder.Services.AddHttpClient<IProductService, ProductService>(c => c.BaseAddress = new Uri(builder.Configuration.GetConnectionString("ServicesUrls:ProductAPI")));
 
 var app = builder.Build();
 
