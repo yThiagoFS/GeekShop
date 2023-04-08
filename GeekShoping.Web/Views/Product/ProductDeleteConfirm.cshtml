@@ -1,0 +1,20 @@
+﻿@model ProductModel
+
+<div class="row">
+    <form asp-action="ProductDelete" asp-route-id="@Model.Id" method="post">
+    <div class="col">
+        <input asp-for="Id" value="@Model.Id">@Model.Id</input>
+        <div>@Model.Name</div>
+        <div>@Model.CategoryName</div>
+        <div>@Model.Description</div>
+        <div>@Model.Price</div>
+        <img src="@Model.ImageURL"/>
+
+        <h3 text-danger>Tem certeza que deseja deletar o produto?</h3>
+        <div>
+            <a asp-action="ProductIndex">Voltar ao inicio</a>
+            <input type="submit">Deletar</input>
+        </div>
+    </div>
+    </form>
+</div>
