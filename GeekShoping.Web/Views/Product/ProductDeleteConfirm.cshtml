@@ -1,6 +1,6 @@
 ﻿@model ProductModel
 
-<form asp-action="ProductDelete" method="post">
+<form asp-action="ProductDelete" asp-route-id="@Model.Id" method="post">
     <div class="container border p-3">
         <h1 class="text-primary">Delete Product</h1>
 
@@ -75,7 +75,7 @@
             </div>
 
             <div class="col-5">
-                <input type="submit" value="Delete" class="btn btn-sucecss form-control" />
+                <input type="submit" value="Delete" class="btn btn-danger form-control" />
             </div>
         </div>
     </div>

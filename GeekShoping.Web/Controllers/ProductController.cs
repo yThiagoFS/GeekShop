@@ -50,7 +50,7 @@ namespace GeekShoping.Web.Controllers
             return NotFound();
         }
 
-        [HttpPost]
+        [HttpPut]
         public async Task<IActionResult> ProductUpdate(ProductModel model)
         {
             if (ModelState.IsValid)
