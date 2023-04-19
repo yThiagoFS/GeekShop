@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JWzEDrXrm6yn/4NKwYZA15XGVdD6MTzMbnoQ2t7ntZboVja2LpLLr3KCa5ol5Yf+dPxEihRPpXRzQN4c7Fc/yQ==",
+  "dgSpecHash": "nUuceXy2PJUI8c7zsmy7gcA5ZvOv+Sq3/8EXOjru39yKrUxeRPXQYz0BETPdtBC0AvSj/F/hM3+Tb2aAXNetZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Thiag\\OneDrive\\Documentos\\microsservice-application\\GeekShop\\GeekShoping.Web\\GeekShoping.Web.csproj",
+  "projectFilePath": "D:\\Projetos\\C#\\GeekShop\\GeekShoping.Web\\GeekShoping.Web.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

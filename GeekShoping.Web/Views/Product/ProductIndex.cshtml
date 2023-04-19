@@ -37,7 +37,7 @@
                         @item.Price.ToString("c")
                     </td>
                     <td>
-                        <a asp-action="ProductEdit">Edit Product</a>
+                        <a asp-action="ProductUpdate" asp-route-id="@item.Id">Edit Product</a>
                     </td>
                     <td>
                         <a asp-action="ProductDeleteConfirm" asp-route-id="@item.Id">Delete Product</a>

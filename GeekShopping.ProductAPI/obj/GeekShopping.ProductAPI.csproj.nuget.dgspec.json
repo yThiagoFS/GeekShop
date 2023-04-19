@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thiag\\OneDrive\\Documentos\\microsservice-application\\GeekShop\\GeekShopping.ProductAPI\\GeekShopping.ProductAPI.csproj": {}
+    "D:\\Projetos\\C#\\GeekShop\\GeekShopping.ProductAPI\\GeekShopping.ProductAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Thiag\\OneDrive\\Documentos\\microsservice-application\\GeekShop\\GeekShopping.ProductAPI\\GeekShopping.ProductAPI.csproj": {
+    "D:\\Projetos\\C#\\GeekShop\\GeekShopping.ProductAPI\\GeekShopping.ProductAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thiag\\OneDrive\\Documentos\\microsservice-application\\GeekShop\\GeekShopping.ProductAPI\\GeekShopping.ProductAPI.csproj",
+        "projectUniqueName": "D:\\Projetos\\C#\\GeekShop\\GeekShopping.ProductAPI\\GeekShopping.ProductAPI.csproj",
         "projectName": "GeekShopping.ProductAPI",
-        "projectPath": "C:\\Users\\Thiag\\OneDrive\\Documentos\\microsservice-application\\GeekShop\\GeekShopping.ProductAPI\\GeekShopping.ProductAPI.csproj",
-        "packagesPath": "C:\\Users\\Thiag\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Thiag\\OneDrive\\Documentos\\microsservice-application\\GeekShop\\GeekShopping.ProductAPI\\obj\\",
+        "projectPath": "D:\\Projetos\\C#\\GeekShop\\GeekShopping.ProductAPI\\GeekShopping.ProductAPI.csproj",
+        "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\C#\\GeekShop\\GeekShopping.ProductAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Thiag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -109,7 +109,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

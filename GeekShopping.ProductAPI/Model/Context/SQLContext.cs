@@ -121,7 +121,6 @@ namespace GeekShopping.ProductAPI.Model.Context
                 CategoryName = "T-shirt"
             });
 
-            modelBuilder.Entity<Product>().Property(p => p.Id).ValueGeneratedNever();
         }
 
     }
