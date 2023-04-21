@@ -6,7 +6,7 @@ namespace GeekShopping.IdentityServer.Configuration
     public static class IdentityConfiguration
     {
         public const string Admin = "Admin";
-        public const string Client = "Password";
+        public const string Client = "Client";
 
         public static IEnumerable<IdentityResource> IdentityResources => new List<IdentityResource>()
         {
