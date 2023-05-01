@@ -15,7 +15,7 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 builder.Services.AddControllers();
 builder.Services.AddAuthentication("Bearer")
-    .AddJwtBearer(opts =>
+    .AddJwtBearer("Bearer", opts =>
     {
         opts.Authority = "https://localhost:4435";
         opts.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters

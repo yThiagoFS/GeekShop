@@ -32,6 +32,15 @@ D:\Projetos\C#\GeekShop\GeekShoping.Web\bin\Debug\net6.0\GeekShoping.Web.deps.js
 D:\Projetos\C#\GeekShop\GeekShoping.Web\bin\Debug\net6.0\GeekShoping.Web.runtimeconfig.json
 D:\Projetos\C#\GeekShop\GeekShoping.Web\bin\Debug\net6.0\GeekShoping.Web.dll
 D:\Projetos\C#\GeekShop\GeekShoping.Web\bin\Debug\net6.0\GeekShoping.Web.pdb
+D:\Projetos\C#\GeekShop\GeekShoping.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+D:\Projetos\C#\GeekShop\GeekShoping.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Projetos\C#\GeekShop\GeekShoping.Web\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Projetos\C#\GeekShop\GeekShoping.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Projetos\C#\GeekShop\GeekShoping.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Projetos\C#\GeekShop\GeekShoping.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Projetos\C#\GeekShop\GeekShoping.Web\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Projetos\C#\GeekShop\GeekShoping.Web\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Projetos\C#\GeekShop\GeekShoping.Web\bin\Debug\net6.0\System.Security.Permissions.dll
 D:\Projetos\C#\GeekShop\GeekShoping.Web\obj\Debug\net6.0\GeekShoping.Web.csproj.AssemblyReference.cache
 D:\Projetos\C#\GeekShop\GeekShoping.Web\obj\Debug\net6.0\GeekShoping.Web.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projetos\C#\GeekShop\GeekShoping.Web\obj\Debug\net6.0\GeekShoping.Web.AssemblyInfoInputs.cache
@@ -50,6 +59,7 @@ D:\Projetos\C#\GeekShop\GeekShoping.Web\obj\Debug\net6.0\staticwebassets.develop
 D:\Projetos\C#\GeekShop\GeekShoping.Web\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\Projetos\C#\GeekShop\GeekShoping.Web\obj\Debug\net6.0\scopedcss\bundle\GeekShoping.Web.styles.css
 D:\Projetos\C#\GeekShop\GeekShoping.Web\obj\Debug\net6.0\scopedcss\projectbundle\GeekShoping.Web.bundle.scp.css
+D:\Projetos\C#\GeekShop\GeekShoping.Web\obj\Debug\net6.0\GeekShoping.Web.csproj.CopyComplete
 D:\Projetos\C#\GeekShop\GeekShoping.Web\obj\Debug\net6.0\GeekShoping.Web.dll
 D:\Projetos\C#\GeekShop\GeekShoping.Web\obj\Debug\net6.0\refint\GeekShoping.Web.dll
 D:\Projetos\C#\GeekShop\GeekShoping.Web\obj\Debug\net6.0\GeekShoping.Web.pdb

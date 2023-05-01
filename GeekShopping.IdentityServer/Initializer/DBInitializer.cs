@@ -52,7 +52,7 @@ namespace GeekShopping.IdentityServer.Initializer
                 new Claim(JwtClaimTypes.GivenName, admin.FirstName),
                 new Claim(JwtClaimTypes.FamilyName, admin.LastName),
                 new Claim(JwtClaimTypes.Role, IdentityConfiguration.Admin)
-            }) ; 
+            }); 
             
             ApplicationUser client = new ApplicationUser() 
             { 

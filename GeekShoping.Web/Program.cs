@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddAuthentication(opts =>
     {
-        opts.DefaultScheme = "Cookie";
+        opts.DefaultScheme = "Cookies";
         opts.DefaultChallengeScheme = "oidc";
     })
     .AddCookie("Cookies", c => c.ExpireTimeSpan = TimeSpan.FromMinutes(10))
@@ -21,10 +21,12 @@ builder.Services.AddAuthentication(opts =>
         opts.ClaimActions.MapJsonKey("role", "role", "role");
         opts.ClaimActions.MapJsonKey("sub", "sub", "sub");
         opts.TokenValidationParameters.NameClaimType = "name";
-        opts.TokenValidationParameters.RoleClaimType = "Role";
+        opts.TokenValidationParameters.RoleClaimType = "role";
         opts.Scope.Add("geek_shopping");
         opts.SaveTokens = true;
     });
+
+var teste = builder.Configuration["GeekShoppingSecret"];
 
 builder.Services.AddHttpClient<IProductService, ProductService>(c => c.BaseAddress 
     = new Uri(builder.Configuration.GetSection("ServicesUrls")["ProductAPI"]));
