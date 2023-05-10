@@ -26,10 +26,10 @@ builder.Services.AddAuthentication(opts =>
         opts.SaveTokens = true;
     });
 
-var teste = builder.Configuration["GeekShoppingSecret"];
-
 builder.Services.AddHttpClient<IProductService, ProductService>(c => c.BaseAddress 
     = new Uri(builder.Configuration.GetSection("ServicesUrls")["ProductAPI"]));
+
+builder.Services.AddHttpClient<ICartService, CartService>(c => c.BaseAddress  = new Uri(builder.Configuration.GetSection("ServicesUrls")["CartAPI"]));
 
 var app = builder.Build();
 

@@ -29,7 +29,6 @@ namespace GeekShopping.CartAPI.Repository
                 .Where(c => c.CartHeaderId == cart.CartHeader.Id)
                 .Include(c => c.Product);
 
-
             return _mapper.Map<CartDto>(cart);
         }
 
@@ -68,7 +67,7 @@ namespace GeekShopping.CartAPI.Repository
                 if(cartDetail == null)
                 {
 
-                    cart.CartDetails.FirstOrDefault().CartHeaderId = cart.CartHeader.Id;
+                    cart.CartDetails.FirstOrDefault().CartHeaderId = cartHeader.Id;
                     cart.CartDetails.FirstOrDefault().Product = null;
 
                     await _context.CartDetails.AddAsync(cart.CartDetails.FirstOrDefault());

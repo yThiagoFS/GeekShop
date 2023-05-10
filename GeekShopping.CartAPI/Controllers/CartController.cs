@@ -25,7 +25,7 @@ namespace GeekShopping.CartAPI.Controllers
             return Ok(cart);
         } 
         
-        [HttpPost("add-cart/{id}")]
+        [HttpPost("add-cart")]
         public async Task<ActionResult<CartDto>> AddCart(CartDto cartDto)
         {
             var cart = await _cartRepository.SaveOrUpdateCart(cartDto);
@@ -35,7 +35,7 @@ namespace GeekShopping.CartAPI.Controllers
             return Ok(cart);
         }
         
-        [HttpPost("update-cart/{id}")]
+        [HttpPut("update-cart")]
         public async Task<ActionResult<CartDto>> UpdateCart(CartDto cartDto)
         {
             var cart = await _cartRepository.SaveOrUpdateCart(cartDto);
@@ -45,7 +45,7 @@ namespace GeekShopping.CartAPI.Controllers
             return Ok(cart);
         }
         
-        [HttpPost("update-cart/{id}")]
+        [HttpDelete("delete-cart/{id}")]
         public async Task<ActionResult<CartDto>> RemoveCart(int id)
         {
             var status = await _cartRepository.RemoveFromCart(id);
