@@ -1,5 +1,6 @@
 ﻿using GeekShoping.Web.Models;
 using GeekShoping.Web.Services.IServices;
+using GeekShopping.Web.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -11,12 +12,15 @@ namespace GeekShoping.Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IProductService _productService;
+        private readonly ICartService _cartService;
 
         public HomeController(ILogger<HomeController> logger
-            ,IProductService productService)
+            ,IProductService productService
+            ,ICartService cartService)
         {
             _logger = logger;
             _productService = productService;
+            _cartService = cartService;
         }
 
         [AllowAnonymous]
@@ -33,6 +37,38 @@ namespace GeekShoping.Web.Controllers
             var product = await _productService.FindProductById(id, await GetToken());
 
             return View(product);
+        }
+
+        [HttpPost]
+        [ActionName("Details")]
+        [Authorize]
+        public async Task<IActionResult> DetailsPost(ProductViewModel model)
+        {
+            CartViewModel cart = new()
+            {
+                CartHeader = new()
+                {
+                    UserId = User.Claims.Where(u => u.Type == "sub")?.FirstOrDefault()?.Value
+                }
+            };
+
+            CartDetailViewModel cartDetail = new()
+            {
+                Count = model.Count,
+                ProductId = model.Id,
+                Product = await _productService.FindProductById(model.Id, await GetToken())
+            };
+
+            List<CartDetailViewModel> cartDetails = new();
+
+            cartDetails.Add(cartDetail);
+
+            var response = await _cartService.AddItemToCart(cart, await GetToken());
+
+            if(response != null)
+                return RedirectToAction(nameof(Index));
+
+            return View(model);
         }
 
         public IActionResult Privacy()
