@@ -7,7 +7,7 @@ namespace GeekShopping.CartAPI.Data.Dtos
 
         public long CartHeaderId { get; set; }
 
-        public CartHeaderDto CartHeader { get; set;}
+        public CartHeaderDto? CartHeader { get; set;}
 
         public long ProductId { get; set; }
 
