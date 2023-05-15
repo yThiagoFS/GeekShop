@@ -19,7 +19,7 @@ namespace GeekShoping.Web.Services
         {
             AddAuthentication(token);
 
-            var response = await _client.GetAsync($"{BasePath}/find-cart/{userId}");
+            var response = await _client.GetAsync($"{BasePath}/find-cart?userId={userId}");
 
             return await response.ReadContentAs<CartViewModel>();
         }

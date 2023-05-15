@@ -105,7 +105,9 @@ namespace GeekShopping.CartAPI.Repository
 
                 _context.CartDetails.Remove(cartDetail);
 
-                if(total == 1)
+                await _context.SaveChangesAsync();
+
+                if (total == 1)
                 {
                     var cartHeaderToRemove = await _context.CartHeaders.FirstOrDefaultAsync(c => c.Id == cartDetail.CartHeaderId);
 
