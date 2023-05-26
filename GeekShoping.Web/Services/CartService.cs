@@ -28,7 +28,7 @@ namespace GeekShoping.Web.Services
         {
             AddAuthentication(token);
 
-            var response = await _client.PostAsJson<CartViewModel>($"{BasePath}/add-cart", model);
+            var response = await _client.PostAsJson($"{BasePath}/add-cart", model);
 
             if (response.IsSuccessStatusCode)
                 return await response.ReadContentAs<CartViewModel>();
@@ -40,7 +40,7 @@ namespace GeekShoping.Web.Services
         {
             AddAuthentication(token);
 
-            var response = await _client.PutAsJson<CartViewModel>($"{BasePath}/update-cart", model);
+            var response = await _client.PutAsJson($"{BasePath}/update-cart", model);
 
             if (response.IsSuccessStatusCode)
                 return await response.ReadContentAs<CartViewModel>();
@@ -60,14 +60,28 @@ namespace GeekShoping.Web.Services
             else throw new Exception($"Something went wrong calling the API. {response.StatusCode}");
         }
 
-        public async Task<bool> ApplyCoupon(CartViewModel cart, string couponCode, string token)
+        public async Task<bool> ApplyCoupon(CartViewModel cart, string token)
         {
-            throw new NotImplementedException();
+            AddAuthentication(token);
+
+            var response = await _client.PostAsJson($"{BasePath}/apply-coupon", cart);
+
+            if (response.IsSuccessStatusCode)
+                return await response.ReadContentAs<bool>();
+
+            else throw new Exception($"Something went wrong calling the API. {response.StatusCode}");
         }
 
         public async Task<bool> RemoveCoupon(string userId, string token)
         {
-            throw new NotImplementedException();
+            AddAuthentication(token);
+
+            var response = await _client.DeleteAsync($"{BasePath}/remove-coupon?userId={userId}");
+
+            if (response.IsSuccessStatusCode)
+                return await response.ReadContentAs<bool>();
+
+            else throw new Exception($"Something went wrong calling the API. {response.StatusCode}");
         }
 
         public async Task<bool> Clear(string userId, string token) 

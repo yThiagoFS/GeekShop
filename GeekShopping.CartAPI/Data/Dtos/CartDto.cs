@@ -6,6 +6,6 @@
         public CartHeaderDto CartHeader { get; set; }
 
 
-        public IEnumerable<CartDetailDto> CartDetails { get; set; }
+        public IEnumerable<CartDetailDto>? CartDetails { get; set; }
     }
 }

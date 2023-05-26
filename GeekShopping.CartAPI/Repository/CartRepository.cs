@@ -4,6 +4,7 @@ using GeekShopping.CartAPI.Model;
 using GeekShopping.CartAPI.Model.Context;
 using GeekShopping.CartAPI.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.PortableExecutable;
 
 namespace GeekShopping.CartAPI.Repository
 {
@@ -127,12 +128,38 @@ namespace GeekShopping.CartAPI.Repository
 
         public async Task<bool> ApplyCoupon(string userId, string coupon)
         {
-            throw new NotImplementedException();
+            var header = await _context.CartHeaders.FirstOrDefaultAsync(c => c.UserId == userId);
+
+            if (header != null)
+            {
+                header.CouponCode = coupon;
+
+                 _context.CartHeaders.Update(header);
+
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+
+            return false;
         }
 
         public async Task<bool> RemoveCoupon(string userId)
         {
-            throw new NotImplementedException();
+            var header = await _context.CartHeaders.FirstOrDefaultAsync(c => c.UserId == userId);
+
+            if (header != null)
+            {
+                header.CouponCode = null;
+
+                _context.CartHeaders.Update(header);
+
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+
+            return false;
         }
 
         public async Task<bool> ClearCart(string userId)
