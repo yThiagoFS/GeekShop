@@ -1,4 +1,5 @@
 ﻿using GeekShopping.CartAPI.Data.Dtos;
+using GeekShopping.CartAPI.Messages;
 using GeekShopping.CartAPI.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -73,6 +74,18 @@ namespace GeekShopping.CartAPI.Controllers
             if (!status) return NotFound();
 
             return Ok(status);
+        }
+          
+        [HttpPost("checkout")]
+        public async Task<ActionResult<CheckoutHeaderDto>> Checkout(CheckoutHeaderDto dto)
+        {
+            var cart = await _cartRepository.FindCartByUserId(dto.UserId);
+
+            if (cart == null) return NotFound();
+
+            dto.CartDetails = cart.CartDetails;
+
+            return Ok(dto);
         }
 
     }
